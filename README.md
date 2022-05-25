@@ -102,7 +102,8 @@ We recommend using [React Router](https://reactrouter.com/docs/en/v6/getting-sta
 
 Important notes:
 - [HashRouter](https://v5.reactrouter.com/web/api/HashRouter) is required, as the [BrowserRouter](https://v5.reactrouter.com/web/api/BrowserRouter) history API is not supported in Minis
-- The default URL path for Minis when opened is not "/", so use a match all for the Minis' main page (e.g. ```<Route path="*" element={<MainPage />} />```. Swipe actions can be implemented with [react-swipeable](https://github.com/FormidableLabs/react-swipeable). 
+- The default URL path for Minis when opened is not "/", so use a match all for the Minis' main page (e.g. ```<Route path="*" element={<MainPage />} />```. 
+- Swipe actions can be implemented with [react-swipeable](https://github.com/FormidableLabs/react-swipeable). 
 
 ## Repo Development
 To run any mini, cd into their directory (e.g. `cd minis/sample` ). Alternatively, all the commands can be run from the root using `--workspace=<path to mini>, -w`
