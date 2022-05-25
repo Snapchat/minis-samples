@@ -1,0 +1,48 @@
+{
+  "name": "minis-samples",
+  "private": true,
+  "description": "sample minis",
+  "license": "UNLICENSED",
+  "repository": "https://github.sc-corp.net/Cognac/minis-samples",
+  "engines": {
+    "node": ">=16.14.2",
+    "npm": ">=8.5.0"
+  },
+  "workspaces": [
+    "minis/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --max-warnings 0 --cache && prettier --check '*/**/*.{json,css,scss,md}'",
+    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --max-warnings 0 --cache --fix && prettier --write '*/**/*.{json,css,scss,md}'",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "eslintIgnore": ["packages/sdk/src/sc-sdk.js", "build"],
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^8.12.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.1",
+    "typescript": "^4.6.4"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --cache --fix",
+    "*/**/*.{json,css,scss,md}": "prettier --write"
+  }
+}

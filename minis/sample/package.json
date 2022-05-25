@@ -1,0 +1,46 @@
+{
+  "name": "sample-mini",
+  "private": true,
+  "dependencies": {
+    "@snapchat/snapcanvas-sdk": "../../packages/sdk",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^16.11.33",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.6.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "rapid:host": "echo http://$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'):3000",
+    "start:rapid": "HOST=0.0.0.0 react-scripts start",
+    "build": "PUBLIC_URL=./ react-scripts build && cd build && zip -r build.zip * && cd -",
+    "build:ci:": "react-scripts build",
+    "build:notes": "echo $(git rev-parse --short=7 HEAD | tr -d [:punct:]).$(git config --global user.name | sed 's/ //g')",
+    "build:version": "echo $(date +%s)",
+    "rapid:version": "echo $(git config --global user.name | sed 's/ //g').$(date +%s)",
+    "minis:id": "cat .env.development | grep REACT_APP_APP_ID | cut -f2 -d=",
+    "minis:create": "npm run build && echo $(npm run minis:id --silent) && snapdev minis build create -p $(npm run minis:id --silent)  -f build/build.zip  -n $(npm run build:notes --silent) -v $(npm run build:version --silent)  -d",
+    "minis:create-rapid": "snapdev minis build create -p $(npm run minis:id --silent) -d -u $(npm run rapid:host --silent)/ -n $(npm run rapid:host --silent)/ -v $(npm run rapid:version --silent)",
+    "minis:release": "snapdev minis release create -p $(npm run minis:id --silent) -m ee556332-8b38-4f7c-8b2c-04d77c23cc10 -n $(npm run build:version --silent)",
+    "minis:target": "snapdev minis release target -p  $(npm run minis:id --silent)"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

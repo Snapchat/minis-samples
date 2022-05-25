@@ -1,0 +1,16 @@
+.share-btn {
+  outline: none;
+  border: 0;
+  border-radius: 50px;
+  height: 40px;
+  width: 80px;
+  vertical-align: middle;
+}
+
+.camera {
+  background: #fffc00;
+}
+
+.chat {
+  background: #0fadff;
+}
