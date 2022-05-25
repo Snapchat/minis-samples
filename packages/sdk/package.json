@@ -1,0 +1,6 @@
+{
+  "name": "@snapchat/snapcanvas-sdk",
+  "version": "v2.8.0",
+  "main": "src/sc-sdk.js",
+  "types": "src/types/sc.d.ts"
+}
