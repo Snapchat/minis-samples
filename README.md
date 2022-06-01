@@ -6,7 +6,7 @@ Plus, they work for all Snapchatters, on any kind of device, with no installatio
 This repo contains sample Snap Minis built using [Create React App](https://create-react-app.dev/docs/getting-started) and Typescript.
 Snap Minis do not need to be built with Create React App or Typescript. Any web framework that bundles the entire application into a single HTML5 bundle can be used.
 
-These samples serve as a guide for developers to quickly get started building their Snap Mini. Please consult or our [docs](https://docs.snap.com/minis/getting-started/home/) if you have any questions not answered in this readme.
+These samples serve as a guide for developers to quickly get started building their Snap Mini. Please consult our [docs](https://docs.snap.com/minis/getting-started/home/) if you have any questions not answered in this readme.
 
 ## Setup
 ```
@@ -119,4 +119,4 @@ npm run lint                 # run lint
 npm run lint:fix             # fix lint
 ```
 
-Please read [doc](create_react_app.md) to learn more about the Create React App commands.
+Please read this [doc](create_react_app.md) to learn more about the Create React App commands.
