@@ -21,7 +21,7 @@
     "rapid:host": "echo http://$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'):3000",
     "start:rapid": "HOST=0.0.0.0 react-scripts start",
     "build": "PUBLIC_URL=./ react-scripts build && cd build && zip -r build.zip * && cd -",
-    "build:ci:": "react-scripts build",
+    "build:ci": "react-scripts build",
     "build:notes": "echo $(git rev-parse --short=7 HEAD | tr -d [:punct:]).$(git config --global user.name | sed 's/ //g')",
     "build:version": "echo $(date +%s)",
     "rapid:version": "echo $(git config --global user.name | sed 's/ //g').$(date +%s)",
