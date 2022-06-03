@@ -16,4 +16,4 @@ jobs:
       - name: Build
         run: npm --ws --if-present run build:ci
       - name: lint
-        run: npm lint
+        run: npm run lint
