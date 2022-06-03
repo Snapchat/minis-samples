@@ -17,11 +17,21 @@ jobs:
     needs: [install]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'npm'
       - name: Build
         run: npm --ws --if-present run build:ci
   lint:
     needs: [install]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'npm'
       - name: lint
         run: npm run lint
