@@ -16,6 +16,8 @@ cd ~/Dev/minis-samples
 npm install --ws
 ```
 
+The minimum Snapchat version for these samples is 11.82.
+
 These common commands will work from any mini under `minis`. For sample, you can `cd minis/sample` and run `npm start` to run the sample mini on your localhost:3000.
 ```
 npm start                      # run on localhost:3000
