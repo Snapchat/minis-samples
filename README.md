@@ -71,11 +71,11 @@ You can now view sample-mini in the browser.
 ```
 2. Create a rapid development build with that port and URL. The build can sometimes fail if "/" is not added after the port.
 ```
-npm run cms:create-rapid
+npm run minis:create-rapid
 ```
 That script will add the URL from `npm run rapid:host --silent`. If that URL is wrong from `npm run rapid:host --silent`, then run
 ```
-npm run cms:create-rapid -- -u <URL from above>\
+npm run minis:create-rapid -- -u <URL from above>\
 ```
 
 The build will be named the \<git username\>.\<unix time\>. It will have the URL as the notes.
