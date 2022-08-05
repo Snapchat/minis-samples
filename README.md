@@ -80,7 +80,7 @@ We recommend using Chrome with the [Chrome debug tools](https://developer.chrome
 We recommend using [React Router](https://reactrouter.com/docs/en/v6/getting-started/tutorial#add-some-routes) to create a multipage mini.
 
 Important notes:
-- [MemoryRouter](https://v5.reactrouter.com/web/api/MemoryRouter) is required, as other routers with browser history will refresh the webpage and cause
+- [MemoryRouter](https://v5.reactrouter.com/web/api/MemoryRouter) is required because routers with browser history will refresh the webpage and cause issues with receiving client events on Android
 - The default URL path for Minis when opened is not "/", so use a match all for the Minis' main page (e.g. ```<Route path="*" element={<MainPage />} />```.
 - Swipe actions can be implemented with [react-swipeable](https://github.com/FormidableLabs/react-swipeable).
 
