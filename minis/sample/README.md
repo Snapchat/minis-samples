@@ -1,7 +1,6 @@
 # Sample
 
-The Sample Mini is used provides full example of how to use the SDK.
-Although it's written in React, the example code applies to out JS frameworks.
+The Sample Mini is provides a full example of how to use the SDK. Although it's written in React, the example code applies to any JS frameworks.
 
 <p align="center">
 <img src="../../images/bitmoji.png" width="150">
