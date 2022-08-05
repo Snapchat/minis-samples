@@ -89,7 +89,7 @@ refresh the webpage and cause issue with receiving client events on Android
 To run any mini, cd into their directory (e.g. `cd minis/sample` ). Alternatively, all the commands can be run from the root using `workspace`.
 
 ```
-yarn workspace minis/sample start
+yarn workspace @snapchat/minis-sample start
 ```
 
 [Husky](https://typicode.github.io/husky/#/) is set up to lint staged files.
