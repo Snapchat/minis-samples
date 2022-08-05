@@ -1,0 +1,7 @@
+.main-container {
+  background-color: #ffffff;
+  padding: calc(var(--window-safe-area-inset-top) + var(--nav-bar-height) + 8px)
+    16px 32px 16px;
+  max-width: 768px;
+  margin: 0 auto;
+}

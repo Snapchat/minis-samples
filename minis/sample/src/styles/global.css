@@ -1,0 +1,183 @@
+@import url("./fonts/fonts.css");
+
+:root {
+  --nav-bar-height: 56px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.stack > * {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.75rem 0;
+}
+
+.stack > *:last-child {
+  margin: 0;
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 1.25rem 0 0 0;
+}
+
+.cell {
+  min-height: 3.5rem;
+  padding: 10px 16px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+}
+
+.cell:last-child {
+  border: none;
+}
+
+.cell > * {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.textstyle-title {
+  color: #16191c;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.textstyle-body {
+  color: #16191c;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.textstyle-subheader {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #656d78;
+}
+
+.textstyle-small-header {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #656d78;
+  text-align: center;
+}
+
+.event-list {
+  margin: 0;
+}
+
+.btn {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+}
+
+.btn-md {
+  height: 2.25rem;
+  border-radius: 1.125rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #0fadff;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  margin-left: -1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+input,
+select,
+label {
+  display: block;
+}
+
+label > input {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+label,
+form > p {
+  padding-left: 1rem;
+  color: #16191c;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+form > input,
+form > select {
+  height: 2.5rem;
+  width: 100%;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1.25rem;
+  background: rgba(0, 0, 0, 0.05);
+
+  color: #656d78;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+form > input:last-child,
+form > select:last-child {
+  margin: 0;
+}
+
+form > input:focus,
+form > select:focus {
+  color: #16191c;
+  background: rgba(0, 0, 0, 0.05);
+  outline: none;
+}
