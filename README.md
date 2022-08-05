@@ -52,7 +52,7 @@ yarn minis:build-rapid
 ```
 That script will add the URL from `yarn rapid:host --silent`. If that URL is wrong from `yarn rapid:host --silent`, then run
 ```
-yarn minis:build-rapid -u <URL from above>\
+yarn minis:build-rapid -u <URL from above>
 ```
 
 The rapid will be named the rapid.\<git username\>.\<unix time\>. It will have the URL as the notes.
