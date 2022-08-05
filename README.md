@@ -13,9 +13,8 @@ These samples serve as a guide for developers to quickly get started building th
 We recommend using [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) for package management.
 
 ```
-git clone git@github.sc-corp.net:Cognac/minis-samples.git ~/Dev/minis-samples
-
-cd ~/Dev/minis-samples
+git clone git@github.com:Snapchat/minis-samples.git
+cd minis-samples
 yarn
 ```
 
