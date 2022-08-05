@@ -12,8 +12,8 @@ jobs:
           node-version: '16.x'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
       - name: Build
-        run: npm --ws --if-present run build:ci
+        run: yarn build:minis:ci
       - name: Lint
-        run: npm run lint
+        run: yarn run lint
