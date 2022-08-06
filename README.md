@@ -20,7 +20,7 @@ yarn
 
 The minimum Snapchat version for these samples is 11.82.
 
-These common commands will work from any mini under `minis`. For sample, you can `cd minis/sample` and run `npm start` to run the sample mini on your localhost:3000.
+These common commands will work from any mini under `minis`. For sample, you can `cd minis/sample` and run `yarn start` to run the sample mini on your localhost:3000.
 ```
 yarn start                      # run on localhost:3000
 yarn minis:build
