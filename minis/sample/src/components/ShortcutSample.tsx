@@ -50,9 +50,7 @@ export const ShortcutSample = ({
               shortcut
                 .canCreateShortcut()
                 .then((res) => setResult(`canCreate: ${JSON.stringify(res)}`))
-                .catch((err) =>
-                  setResult(`canCreate error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`canCreate error: ${err}`));
             }}
           >
             canCreateShortcut
@@ -65,9 +63,7 @@ export const ShortcutSample = ({
               shortcut
                 .createShortcut()
                 .then(() => setResult("createShortcut"))
-                .catch((err) =>
-                  setResult(`createShortcut error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`createShortcut error: ${err}`));
             }}
           >
             createShortcut

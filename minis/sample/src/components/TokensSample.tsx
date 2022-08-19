@@ -21,9 +21,7 @@ export const TokensSample = ({ tokens }: { tokens: Tokens }) => {
               tokens
                 .isSupported()
                 .then((res) => setResult(`isSupported: ${JSON.stringify(res)}`))
-                .catch((err) =>
-                  setResult(`isSupported error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`isSupported error: ${err}`));
             }}
           >
             isSupported
@@ -39,9 +37,7 @@ export const TokensSample = ({ tokens }: { tokens: Tokens }) => {
                   setSKUs(res.products[0]?.sku ? [res.products[0]?.sku] : []);
                   return;
                 })
-                .catch((err) =>
-                  setResult(`getAllProducts error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`getAllProducts error: ${err}`));
             }}
           >
             getAllProducts
@@ -71,9 +67,7 @@ export const TokensSample = ({ tokens }: { tokens: Tokens }) => {
                   setSKUs(res.products[0]?.sku ? [res.products[0]?.sku] : []);
                   return;
                 })
-                .catch((err) =>
-                  setResult(`getProducts error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`getProducts error: ${err}`));
             }}
           >
             getProducts
@@ -102,9 +96,7 @@ export const TokensSample = ({ tokens }: { tokens: Tokens }) => {
                   setTxnId(res.purchase.transactionId);
                   return;
                 })
-                .catch((err) =>
-                  setResult(`purchase error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`purchase error: ${err}`));
             }}
           >
             purchase
@@ -120,9 +112,7 @@ export const TokensSample = ({ tokens }: { tokens: Tokens }) => {
                   return;
                 })
                 .catch((err) =>
-                  setResult(
-                    `getUnconsumedPurchases error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`getUnconsumedPurchases error: ${err}`)
                 );
             }}
           >
@@ -152,9 +142,7 @@ export const TokensSample = ({ tokens }: { tokens: Tokens }) => {
                   setTxnId("");
                   return;
                 })
-                .catch((err) =>
-                  setResult(`consumePurchase error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`consumePurchase error: ${err}`));
             }}
           >
             consumePurchase

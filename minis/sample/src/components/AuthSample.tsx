@@ -19,9 +19,7 @@ export const AuthSample = ({ auth }: { auth: Auth }) => {
               auth
                 .fetchAuthToken()
                 .then((res) => setResult(`fetchAuthToken token: ${res.token}`))
-                .catch((err) =>
-                  setResult(`fetchAuthToken error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`fetchAuthToken error: ${err}`));
             }}
           >
             fetchAuthToken

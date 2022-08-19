@@ -74,7 +74,7 @@ export const RealtimeSample = ({
         setInMatch(true);
         return;
       })
-      .catch((err) => setResult(`join error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`join error: ${err}`));
   }, [realtime]);
 
   useEffect(() => {
@@ -150,7 +150,7 @@ export const RealtimeSample = ({
                   setInMatch(false); // leave called in hook
                   setRcvData("");
                 } catch (err) {
-                  setResult(`leave error: ${JSON.stringify(err)}`);
+                  setResult(`leave error: ${err}`);
                 }
               }}
             >

@@ -16,6 +16,8 @@ export const HappeningNowUpdates = ({
   const [result, setResult] = useState<string>("");
   const [thumbnailType, setThumbnailType] = useState<string>("BITMOJI");
   const [includeSelf, setIncludeSelf] = useState<boolean>(false);
+  const [path, setPath] = useState<string>("");
+  const [payload, setPayload] = useState<string>("");
 
   return (
     <div className="card">
@@ -69,6 +71,24 @@ export const HappeningNowUpdates = ({
               <option value={"BITMOJI"}>BITMOJI</option>
               <option value={"IMAGE"}>IMAGE</option>
             </select>
+            <label htmlFor="path">Path</label>
+            <input
+              type="text"
+              id="path"
+              name="path"
+              placeholder=""
+              value={path}
+              onChange={(e) => setPath(e.target.value)}
+            />
+            <label htmlFor="payload">Payload</label>
+            <input
+              type="text"
+              id="payload"
+              name="payload"
+              placeholder=""
+              value={payload}
+              onChange={(e) => setPayload(e.target.value)}
+            />
           </form>
           <button
             type="button"
@@ -91,13 +111,17 @@ export const HappeningNowUpdates = ({
                     A: a,
                     B: b,
                   },
-                  thumbnail
+                  thumbnail,
+                  Date.now(),
+                  Date.now() + 24 * 60 * 60 * 1000,
+                  {
+                    path,
+                    payload,
+                  }
                 )
                 .then(() => setResult("sendHappeningNowToSelf success"))
                 .catch((err) =>
-                  setResult(
-                    `sendHappeningNowUpdateToSelf error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`sendHappeningNowUpdateToSelf error: ${err}`)
                 );
             }}
           >
@@ -124,7 +148,9 @@ export const HappeningNowUpdates = ({
                     A: a,
                     B: b,
                   },
-                  thumbnail
+                  thumbnail,
+                  Date.now(),
+                  Date.now() + 24 * 60 * 60 * 1000
                 )
                 .then(() => setResult("sendHappeningNowToFriends success"))
                 .catch((err) =>
@@ -174,7 +200,13 @@ export const HappeningNowUpdates = ({
                     A: a,
                     B: b,
                   },
-                  thumbnail
+                  thumbnail,
+                  Date.now(),
+                  Date.now() + 24 * 60 * 60 * 1000,
+                  {
+                    path,
+                    payload,
+                  }
                 )
                 .then(() => setResult("sendHappeningNowToConversation success"))
                 .catch((err) =>

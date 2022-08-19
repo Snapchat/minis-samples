@@ -14,19 +14,19 @@ export const LocalStorageSample = ({
     localStorage
       .setData({ [key]: value })
       .then(() => setResult("setData success"))
-      .catch((err) => setResult(`setData error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`setData error: ${err}`));
 
   const getData = async () =>
     localStorage
       .getData([key])
       .then((res) => setResult(`getData: ${JSON.stringify(res)}`))
-      .catch((err) => setResult(`getData error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`getData error: ${err}`));
 
   const deleteData = async () =>
     localStorage
       .deleteData([key])
       .then(() => setResult("deleteData success"))
-      .catch((err) => setResult(`deleteData error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`deleteData error: ${err}`));
 
   return (
     <div className="card">

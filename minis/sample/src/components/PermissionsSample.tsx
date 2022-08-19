@@ -72,9 +72,7 @@ export const PermissionsSample = ({
                     `getPermissions: ${JSON.stringify(res.permissions)}`
                   )
                 )
-                .catch((err) =>
-                  setResult(`getPermissions error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`getPermissions error: ${err}`));
             }}
           >
             getPermissions
@@ -114,9 +112,7 @@ export const PermissionsSample = ({
                     `requestPermissions: ${JSON.stringify(res.permissions)}`
                   )
                 )
-                .catch((err) =>
-                  setResult(`requestPermissions error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`requestPermissions error: ${err}`));
             }}
           >
             requestPermissions
@@ -131,9 +127,7 @@ export const PermissionsSample = ({
                   setResult(`validateAgeThreshold: ${JSON.stringify(res)}`)
                 )
                 .catch((err) =>
-                  setResult(
-                    `validateAgeThreshold error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`validateAgeThreshold error: ${err}`)
                 );
             }}
           >

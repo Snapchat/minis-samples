@@ -174,9 +174,7 @@ const TextAndImageSharing = ({
                   )
                 )
                 .catch((err) =>
-                  setResult(
-                    `launchCameraWithLens error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`launchCameraWithLens error: ${err}`)
                 );
             }}
           >
@@ -221,9 +219,7 @@ const TextAndImageSharing = ({
                 )
                 .then(() => setResult("sendShareCardToChat w/Text success"))
                 .catch((err) =>
-                  setResult(
-                    `sendShareCardToChat w/Text error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`sendShareCardToChat w/Text error: ${err}`)
                 );
             }}
           >
@@ -244,9 +240,7 @@ const TextAndImageSharing = ({
                 )
                 .then(() => setResult("sendShareCardToChat w/Image success"))
                 .catch((err) =>
-                  setResult(
-                    `sendShareCardToChat w/Image error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`sendShareCardToChat w/Image error: ${err}`)
                 );
             }}
           >

@@ -64,9 +64,7 @@ export const AdsSample = ({ ads, mini }: { ads: Ads; mini: Mini }) => {
                 .then((res) =>
                   setResult(`initializeAds: ${JSON.stringify(res)}`)
                 )
-                .catch((err) =>
-                  setResult(`initializeAds error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`initializeAds error: ${err}`));
             }}
           >
             initializeAds
@@ -79,9 +77,7 @@ export const AdsSample = ({ ads, mini }: { ads: Ads; mini: Mini }) => {
               ads
                 .isAdReady(slotId)
                 .then((res) => setResult(`isAdReady: ${JSON.stringify(res)}`))
-                .catch((err) =>
-                  setResult(`isAdReady error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`isAdReady error: ${err}`));
             }}
           >
             isAdReady
@@ -113,9 +109,7 @@ export const AdsSample = ({ ads, mini }: { ads: Ads; mini: Mini }) => {
                   setRequestId(res.requestId);
                   return;
                 })
-                .catch((err) =>
-                  setResult(`watchAd error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`watchAd error: ${err}`));
             }}
           >
             watchAd
@@ -132,9 +126,7 @@ export const AdsSample = ({ ads, mini }: { ads: Ads; mini: Mini }) => {
                   setRequestId(res.unconsumedAds[0]?.requestId ?? "");
                   return;
                 })
-                .catch((err) =>
-                  setResult(`unconsumedAds error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`unconsumedAds error: ${err}`));
             }}
           >
             getUnconsumedAds
@@ -167,9 +159,7 @@ export const AdsSample = ({ ads, mini }: { ads: Ads; mini: Mini }) => {
                   setRequestId("");
                   return;
                 })
-                .catch((err) =>
-                  setResult(`consumeAd error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`consumeAd error: ${err}`));
             }}
           >
             consumeAd
