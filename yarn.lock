@@ -1654,10 +1654,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@snapchat/minis-sdk@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@snapchat/minis-sdk/-/minis-sdk-3.0.4.tgz#6dc0c35f7530c894a647a9317b79e0bc2bccff50"
-  integrity sha512-52lnpDu2pv33b4t4oDQy4/HbpqGsiwMgcD81MGFYe0Yb9ILXJpZeJCMolXcu9NYYQEYW2nkU39DcB8rNUpQaqw==
+"@snapchat/minis-sdk@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@snapchat/minis-sdk/-/minis-sdk-3.0.5.tgz#013ac4e3bb3e5d0aeefb0d325910af882e6feeb6"
+  integrity sha512-f2TH+J2zbhRPcNuPl4j92z0ppvv69i5JhU47YGz+Xb1VcPLS/jz3naj0buYrQ6NNxaLTGMqYiATNUlAe2GcHEA==
   dependencies:
     "@msgpack/msgpack" "^2.7.2"
     long "5.2.0"

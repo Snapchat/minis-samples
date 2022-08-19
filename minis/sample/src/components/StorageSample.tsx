@@ -13,7 +13,7 @@ export const StorageSample = ({ storage }: { storage: Storage }) => {
     storage
       .setData(storageScope, collection, [{ key: key, value: value }])
       .then(() => setResult("setData success"))
-      .catch((err) => setResult(`setData error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`setData error: ${err}`));
 
   const getData = async () =>
     storage
@@ -27,7 +27,7 @@ export const StorageSample = ({ storage }: { storage: Storage }) => {
           }`
         )
       )
-      .catch((err) => setResult(`getData error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`getData error: ${err}`));
 
   const scanData = async () =>
     storage
@@ -39,13 +39,13 @@ export const StorageSample = ({ storage }: { storage: Storage }) => {
           )}`
         )
       )
-      .catch((err) => setResult(`scanData error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`scanData error: ${err}`));
 
   const deleteData = async () =>
     storage
       .deleteData(storageScope, collection, [key])
       .then(() => setResult("deleteData success"))
-      .catch((err) => setResult(`deleteData error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`deleteData error: ${err}`));
 
   return (
     <div className="card">

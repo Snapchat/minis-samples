@@ -90,9 +90,7 @@ export const LeaderboardsSample = ({
               leaderboard
                 .presentLeaderboard(id)
                 .then(() => setResult("presentLeaderboard success"))
-                .catch((err) =>
-                  setResult(`presentLeaderboard error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`presentLeaderboard error: ${err}`));
             }}
           >
             presentLeaderboard
@@ -105,9 +103,7 @@ export const LeaderboardsSample = ({
               leaderboard
                 .submitScore(id, score)
                 .then(() => setResult("submitScore success"))
-                .catch((err) =>
-                  setResult(`submitScore error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`submitScore error: ${err}`));
             }}
           >
             submitScore
@@ -119,9 +115,7 @@ export const LeaderboardsSample = ({
               leaderboard
                 .getScores(id, mini.user.id)
                 .then((resp) => setResult(JSON.stringify(resp, undefined, 4)))
-                .catch((err) =>
-                  setResult(`getScores error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`getScores error: ${err}`));
             }}
           >
             getScores

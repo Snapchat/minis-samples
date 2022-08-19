@@ -79,9 +79,7 @@ export const ChatUpdates = ({ updates }: { updates: Updates }) => {
                 )
                 .then(() => setResult("sendCustomChatMessage success"))
                 .catch((err) =>
-                  setResult(
-                    `sendCustomChatMessage error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`sendCustomChatMessage error: ${err}`)
                 );
             }}
           >
@@ -98,9 +96,7 @@ export const ChatUpdates = ({ updates }: { updates: Updates }) => {
                 })
                 .then(() => setResult("sendCustomNotification success"))
                 .catch((err) =>
-                  setResult(
-                    `sendCustomNotification error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`sendCustomNotification error: ${err}`)
                 );
             }}
           >

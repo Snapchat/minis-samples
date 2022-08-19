@@ -41,9 +41,7 @@ export const SocialSample = ({ social }: { social: Social }) => {
                 .then((res) =>
                   setResult(`playWithFriends: ${JSON.stringify(res)}`)
                 )
-                .catch((err) =>
-                  setResult(`playWithFriends error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`playWithFriends error: ${err}`));
             }}
           >
             playWithFriends
@@ -61,9 +59,7 @@ export const SocialSample = ({ social }: { social: Social }) => {
                   }
                   return;
                 })
-                .catch((err) =>
-                  setResult(`discoverFriends error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`discoverFriends error: ${err}`));
             }}
           >
             discoverFriends
@@ -78,9 +74,7 @@ export const SocialSample = ({ social }: { social: Social }) => {
                   setResult(`getParticipants: ${JSON.stringify(res)}`);
                   return;
                 })
-                .catch((err) =>
-                  setResult(`getParticipants error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`getParticipants error: ${err}`));
             }}
           >
             getParticipants
@@ -98,9 +92,7 @@ export const SocialSample = ({ social }: { social: Social }) => {
                   }
                   return;
                 })
-                .catch((err) =>
-                  setResult(`getSession error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`getSession error: ${err}`));
             }}
           >
             getSessions
@@ -114,9 +106,7 @@ export const SocialSample = ({ social }: { social: Social }) => {
                 .then((res) =>
                   setResult(`switch to friend with sessionId: ${res.sessionId}`)
                 )
-                .catch((err) =>
-                  setResult(`switchToFriend: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`switchToFriend: ${err}`));
             }}
           >
             switchToFriend
@@ -130,12 +120,26 @@ export const SocialSample = ({ social }: { social: Social }) => {
                 .then((res) =>
                   setResult(`switchToSession: ${JSON.stringify(res)}`)
                 )
-                .catch((err) =>
-                  setResult(`switchToSession error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`switchToSession error: ${err}`));
             }}
           >
             switchToSession
+          </button>
+          <button
+            type="button"
+            className="btn btn-md btn-primary"
+            onClick={() => {
+              social
+                .switchToIndividualSession()
+                .then((res) =>
+                  setResult(`switchToIndividualSession: ${JSON.stringify(res)}`)
+                )
+                .catch((err) =>
+                  setResult(`switchToIndividualSession error: ${err}`)
+                );
+            }}
+          >
+            switchToIndividualSession
           </button>
         </div>
       </div>

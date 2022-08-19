@@ -203,9 +203,7 @@ const Methods = ({
                 .presentPrivacyPolicy()
                 .then(() => setResult("privacy policy presented"))
                 .catch((err) =>
-                  setResult(
-                    `privacy policy presented error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`privacy policy presented error: ${err}`)
                 );
             }}
           >
@@ -220,9 +218,7 @@ const Methods = ({
                 .presentTermsOfService()
                 .then(() => setResult("terms of service presented"))
                 .catch((err) =>
-                  setResult(
-                    `present terms of service error: ${JSON.stringify(err)}`
-                  )
+                  setResult(`present terms of service error: ${err}`)
                 );
             }}
           >
@@ -250,9 +246,7 @@ const Methods = ({
               mini
                 .presentWebpage(url)
                 .then(() => setResult(`webpage: ${url} presented`))
-                .catch((err) =>
-                  setResult(`present webpage error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`present webpage error: ${err}`));
             }}
           >
             presentWebpage
@@ -312,9 +306,7 @@ const Methods = ({
                 [logParam]: logKey,
               })
                 .then((res) => setResult(`logEvent: ${JSON.stringify(res)}`))
-                .catch((err) =>
-                  setResult(`logEvent error: ${JSON.stringify(err)}`)
-                );
+                .catch((err) => setResult(`logEvent error: ${err}`));
             }}
           >
             logEvent

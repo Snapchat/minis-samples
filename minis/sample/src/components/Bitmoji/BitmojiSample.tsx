@@ -88,7 +88,7 @@ const Bitmoji2DSample = ({
 
     setup()
       .then(() => setResult("fetchAvatar2d success"))
-      .catch((err) => setResult(`fetchAvatar2D error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`fetchAvatar2D error: ${err}`));
   }, [avatarId, avatarValue, bitmoji]);
 
   return (
@@ -159,7 +159,7 @@ const Bitmoji3DSample = ({
 
     setup()
       .then(() => setResult("fetchAvatar3d success"))
-      .catch((err) => setResult(`fetchAvatar3d error: ${JSON.stringify(err)}`));
+      .catch((err) => setResult(`fetchAvatar3d error: ${err}`));
   }, [runtime, avatarId, bitmoji]);
 
   return (
